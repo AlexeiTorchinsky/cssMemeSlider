@@ -4,3 +4,28 @@
 body {
     background-color: rgba(63, 63, 63, 0.7);
 }
+
+.slider {
+    max-width: 31.25rem; 
+    width: 100%;
+    margin: 10% auto;   
+}
+
+.slider  input {
+	visibility: hidden;
+}
+
+.slides {
+    transition: all 0.5s ease-out;
+}
+
+.meme {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
+.controls {
+	display: flex;
+    flex-direction: row;
+} 
