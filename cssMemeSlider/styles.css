@@ -2,13 +2,13 @@
 
 
 body {
-    background-color: rgba(63, 63, 63, 0.7);
+  background-color: rgba(63, 63, 63, 0.7);
 }
 
 .slider {
-    max-width: 31.25rem; 
-    width: 100%;
-    margin: 10% auto;   
+  max-width: 31.25rem;
+  width: 100%;
+  margin: 10% auto;
 }
 
 .slider  input {
@@ -16,16 +16,108 @@ body {
 }
 
 .slides {
-    transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .meme {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap-reverse;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
 
 .controls {
 	display: flex;
-    flex-direction: row;
-} 
+  flex-direction: row;
+}
+
+
+.controls label:hover {
+  background-color: #ddd;
+}
+
+.controls label:active {
+  transform: scale(0.9);
+}
+
+.slides-img {
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#input1:checked ~ .meme > .controls > .label1  {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+#input2:checked ~ .meme > .controls > .label2  {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+#input3:checked ~ .meme > .controls > .label3  {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+#input4:checked ~ .meme > .controls > .label4  {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+#input1:checked ~ .slides-img > .slide1 {
+  margin-left: 0;
+}
+#input2:checked ~ .slides-img > .slide1 {
+  margin-left: -100%;
+}
+
+#input3:checked ~ .slides-img > .slide1 {
+  margin-left: -200%;
+}
+
+#input4:checked ~ .slides-img > .slide1 {
+  margin-left: -300%;
+}
+
+#input1:checked ~ .meme > .meme-capture_overflow > .text1 {
+  opacity: 1;
+}
+
+#input2:checked ~ .meme > .meme-capture_overflow > .text2 {
+  opacity: 1;
+  margin-left: -25%;
+
+}
+
+#input3:checked ~ .meme > .meme-capture_overflow > .text3 {
+  opacity: 1;
+  margin-left: -50%;
+}
+
+#input4:checked ~ .meme > .meme-capture_overflow > .text4 {
+  opacity: 1;
+  margin-left: -73%;
+}
+/**********media***********/
+
+@media screen and (max-width: 499px) {
+
+  .slider,
+  img {
+    width: 20rem;
+  }
+  .controls {
+    margin : 0 auto;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .slider,
+  img {
+    width: 14rem;
+  }
+  .controls {
+    margin : 0 auto;
+  }
+}
