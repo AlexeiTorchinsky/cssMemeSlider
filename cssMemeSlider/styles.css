@@ -1,0 +1,161 @@
+@import url('./assets/css/normalize.css');
+
+
+body {
+  background-color: rgba(63, 63, 63, 0.7);
+}
+
+.slider {
+  max-width: 31.25rem;
+  width: 100%;
+  margin: 10% auto 0;
+}
+
+.slider  input {
+	visibility: hidden;
+}
+
+.slides {
+  transition: all 0.5s ease-out;
+}
+
+.meme {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+
+.controls {
+	display: flex;
+  flex-direction: row;
+}
+
+.controls label {
+  border: 3px solid #ddd;
+  cursor: pointer;
+  display: inline-block;
+  height: 1rem;  
+  width: 1rem;
+  border-radius: 50%;
+  margin: 0.3rem;
+}
+.controls label:hover {
+  background-color: #ddd;
+} 
+
+.controls label:hover {
+  background-color: #ddd;
+}
+
+.controls label:active {
+  transform: scale(0.9);
+}
+
+.meme-label {
+    
+  width: 2rem;
+  height: 2rem;
+  margin-top: -8px;
+  margin-left: -8px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.meme-capture_overflow {  
+  display: flex;
+
+} 
+.meme-text{
+  font-family: sans-serif;
+  font-weight: bold ;
+  color: #ddd;
+  margin-top: 0.5rem;
+  white-space: nowrap;
+  transition: all 0.5s ease-out;
+  opacity: 0       
+}
+
+
+
+
+.slides-img {
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#input1:checked ~ .meme > .controls > .label1  {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+#input2:checked ~ .meme > .controls > .label2  {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+#input3:checked ~ .meme > .controls > .label3  {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+#input4:checked ~ .meme > .controls > .label4  {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+#input1:checked ~ .slides-img > .slide1 {
+  margin-left: 0;
+}
+#input2:checked ~ .slides-img > .slide1 {
+  margin-left: -100%;
+}
+
+#input3:checked ~ .slides-img > .slide1 {
+  margin-left: -200%;
+}
+
+#input4:checked ~ .slides-img > .slide1 {
+  margin-left: -300%;
+}
+
+#input1:checked ~ .meme > .meme-capture_overflow > .text1 {
+  opacity: 1;
+}
+
+#input2:checked ~ .meme > .meme-capture_overflow > .text2 {
+  opacity: 1;
+  margin-left: -25%;
+
+}
+
+#input3:checked ~ .meme > .meme-capture_overflow > .text3 {
+  opacity: 1;
+  margin-left: -50%;
+}
+
+#input4:checked ~ .meme > .meme-capture_overflow > .text4 {
+  opacity: 1;
+  margin-left: -73%;
+}
+/**********media***********/
+
+@media screen and (max-width: 499px) {
+
+  .slider,
+  img {
+    width: 20rem;
+  }
+  .controls {
+    margin : 0 auto;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .slider,
+  img {
+    width: 14rem;
+  }
+  .controls {
+    margin : 0 auto;
+  }
+}
