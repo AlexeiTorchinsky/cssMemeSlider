@@ -8,7 +8,7 @@ body {
 .slider {
   max-width: 31.25rem;
   width: 100%;
-  margin: 10% auto;
+  margin: 10% auto 0;
 }
 
 .slider  input {
